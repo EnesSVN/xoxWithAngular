@@ -1,7 +1,7 @@
 <h1>{{ title }} game</h1>
 <h2 class="alert alert-warning text-center">Sıradaki player: {{ mark }}</h2>
 
-<button class="btn btn-primary w-100">New Game</button>
+<button (click)="newGame()" class="btn btn-primary w-100">New Game</button>
 <div class="row">
   <div
     (click)="setMark(index)"
