@@ -15,4 +15,10 @@
   </div>
 </div>
 <hr />
-<button class="btn btn-primary">1. Hamle</button>
+<button
+  *ngFor="let m of moves; let index = index"
+  (click)="returnSelectMove(index)"
+  class="btn btn-danger mt-1 mx-1"
+>
+  {{ index + 1 }}. Hamle
+</button>
