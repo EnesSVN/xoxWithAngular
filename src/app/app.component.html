@@ -1,1 +1,17 @@
 <h1>{{ title }} game</h1>
+<h2 class="alert alert-warning text-center">Sıradaki player: X</h2>
+
+<button class="btn btn-primary w-100">New Game</button>
+<div class="row">
+  <div
+    class="col-md-4 text-center text-warning"
+    style="border: 1px solid #ccc; height: 120px"
+    *ngFor="let game of games; let index = index"
+  >
+    <span style="font-size: 80px">
+      {{ game }}
+    </span>
+  </div>
+</div>
+<hr />
+<button class="btn btn-primary">1. Hamle</button>
