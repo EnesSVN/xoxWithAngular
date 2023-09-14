@@ -1,18 +1,19 @@
 <h1>{{ title }} game</h1>
-<h2 class="alert alert-warning text-center">Sıradaki player: {{ mark }}</h2>
+<h2 class="alert alert-warning text-center">{{ message }}</h2>
 
 <button (click)="newGame()" class="btn btn-primary w-100">New Game</button>
 <div class="row">
-  <div
+  <button
     (click)="setMark(index)"
-    class="col-md-4 text-center text-warning"
+    class="col-md-4 text-center"
+    [ngClass]="changeWinnerButtonClass(game.winner)"
     style="border: 1px solid #ccc; height: 150px; cursor: pointer"
     *ngFor="let game of games; let index = index"
   >
     <span style="font-size: 80px">
-      {{ game }}
+      {{ game.mark }}
     </span>
-  </div>
+  </button>
 </div>
 <hr />
 <button
