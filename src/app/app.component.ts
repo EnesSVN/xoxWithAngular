@@ -6,11 +6,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'XoX';
-  mark = 'X';
-  games: string[] = ['', '', '', '', '', '', '', '', ''];
+  mark = '';
+  games: string[] = [];
+  constructor() {
+    this.newGame();
+  }
 
   setMark(index: number) {
     this.games[index] = this.mark;
     this.mark = this.mark === 'X' ? 'O' : 'X';
+  }
+
+  newGame() {
+    this.games = ['', '', '', '', '', '', '', '', ''];
+    this.mark = 'X';
   }
 }
